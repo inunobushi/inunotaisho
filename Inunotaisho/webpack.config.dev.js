@@ -40,7 +40,7 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
     },
     target: 'web',
       output: {
-        path: `${__dirname}/public/dist/`,
+        path: `${__dirname}/wwwroot/dist`,
         filename: "[name].bundle.js",
         chunkFilename: "[id].chunk.js"
      },
