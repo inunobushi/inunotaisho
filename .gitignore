@@ -40,3 +40,9 @@ Thumbs.db
 
 # dotCover
 *.dotCover
+
+# Distribution files
+wwwroot/dist
+wwwroot/font
+wwwroot/images
+wwwroot/index.html
