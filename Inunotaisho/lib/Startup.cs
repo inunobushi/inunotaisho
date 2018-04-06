@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,7 +29,7 @@ namespace Inunotaisho
                     !Path.HasExtension(context.Request.Path.Value) &&
                     !context.Request.Path.Value.StartsWith("/api/"))
                 {
-                    context.Request.Path = "/index.html";
+                    context.Request.Path = "wwwroot/index.html";
                     await next();
                 }
             });
