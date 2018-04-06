@@ -1,0 +1,53 @@
+<div class="app">
+    <navbar></navbar>
+    <div class="cpadding">
+        <div class="socialpos">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="iconpadding">
+                        <div class="iconpos">
+                            <a class="socicon" href="" rel="nofollow"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a>
+                            <a class="socicon" href="" rel="nofollow"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a>
+                            <a class="socicon" href="" rel="nofollow"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+                            <a class="socicon" href="" rel="nofollow"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactpos">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h2 class="panel-title">Contact Me</h2>
+                    </div>
+                    <div class="panel-body">
+                        <form #contactForm="ngForm" method="POST" action="/contact" (ngSubmit)="onSubmit(contactForm)" id="inputform">
+                            <div class="form-group">
+                                <input type="text" name="_gotcha" style="display: none">
+                                <!--<label>Contact</label>
+                                <select class="form-control" required>{{user.email}}</select>-->
+                                <label>First Name</label>
+                                <input class="form-control" type="text" name="firstName" ngModel required #firstName="ngModel">
+                                <label>Last Name</label>
+                                <input class="form-control" type="text" name="lastName" ngModel required #lastName="ngModel">
+                                <label>Email</label>
+                                <div class="form-group" [ngClass]="{ 'has-error': submitted && !valid }">
+                                    <input class ="form-control" type="email" name="email" ngModel required #email="ngModel">
+                                    <p *ngIf="errors && errors.uniqueUsername">Email is not valid</p>
+                                </div>
+                                <label>Subject</label>
+                                <input class="form-control" type="text" name="subject" ngModel required #subject="ngModel">
+                                <label>Message</label>
+                                <textarea class="form-control" name="message" rows="6" required ngModel></textarea>
+                                <div class="btnpadding">
+                                    <button class="btn btn-default" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
