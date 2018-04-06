@@ -42,7 +42,4 @@ Thumbs.db
 *.dotCover
 
 # Distribution files
-wwwroot/dist
-wwwroot/font
-wwwroot/images
-wwwroot/index.html
+Inunotaisho/wwwroot/*
