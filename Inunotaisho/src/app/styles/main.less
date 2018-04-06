@@ -1,0 +1,124 @@
+@import '../views/navbar/navbar.less';
+@import '../views/home/home.less';
+@import '../views/education/ed.less';
+@import '../views/portfolio/portfolio.less';
+@import '../views/login/login.less';
+@import '../views/contact/contact.less';
+@import '../views/blog/blog.less';
+@import '../views/blogPost/blogPost.less';
+@import '../views/profile/profile.vc.less';
+@import '../views/write/write.less';
+
+@import (inline) '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../../node_modules/bootstrap/less/theme.less';
+
+@import (inline) '../../../node_modules/font-awesome/css/font-awesome.min.css';
+@import (inline) '../../../node_modules/froala-editor/css/froala_editor.pkgd.min.css';
+@import (inline) '../../../node_modules/froala-editor/css/froala_style.min.css';
+
+
+
+    .app{
+        height: 100vh;
+        width: 100vw;
+        z-index: 1000000;
+        position: absolute;
+        background-color: white;
+    }
+
+
+
+    .easterEgg{
+        color: #fff;
+    }
+
+    @media(min-width:1149px){
+        .mottoposMobile{
+            display: none;
+            a.socionMobile{
+                display: none;
+            }
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                padding-left: 150px;
+            }
+            .paddingRight{
+                padding-right: 150px;
+            }
+            a.socicon{
+                color:#333;
+                text-decoration: none; 
+            }
+            a.pdf{
+                color:#333;
+                text-decoration: none;
+        
+            }
+        
+        }
+    }
+    @media(min-width:767px) and (max-width: 1148px){
+        .mottoposMobile{
+            display: none;
+            a.socionMobile{
+                display: none;
+            }
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                padding-left: 150px;
+            }
+            .paddingRight{
+                padding-right: 150px;
+            }
+            a.socicon{
+                color:#333;
+                text-decoration: none; 
+            }
+            a.pdf{
+                color:#333;
+                text-decoration: none;
+        
+            }
+        
+        }
+    }
+    @media(max-width:767px){
+        .mottoposMobile{
+            display: flex;
+            justify-content: space-around;
+            padding-top: 15px;
+            a.sociconMobile{
+                color:#333;
+                text-decoration: none;
+            }
+        }
+        .importantpos{
+            display: flex;
+            justify-content: space-around;
+            padding-top:20px;
+            .paddingLeft{
+                display: none
+            }
+            .paddingRight{
+                display: none
+            }
+            a.socicon{
+                display: none; 
+            }
+            a.pdf{
+                color:#333;
+                text-decoration: none;
+        
+            }
+        
+        }
+
+    }
