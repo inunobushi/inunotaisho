@@ -2,7 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace IunotaishoVue.models
+namespace Iunotaisho.models
 {
 
     public class ContactSchema
