@@ -1,7 +1,12 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inunotaisho", "Inunotaisho\Inunotaisho.csproj", "{081F0D29-7810-4434-836B-EEF66440A85B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inunotaisho", "Inunotaisho\Inunotaisho.csproj", "{081F0D29-7810-4434-836B-EEF66440A85B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{57A791D0-0AFD-4C4A-A8D6-64A97CCE606F}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
