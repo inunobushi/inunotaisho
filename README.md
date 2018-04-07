@@ -18,7 +18,6 @@ First clone this repo. Before taking futher steps, make sure you have a few thin
 
 - If running Linux, Visual Studio is not available. Fret not, there is a way around that.
 - First download Visual Studio Code. Depending on your flavor of Linux you will either download the [Debian/Ubuntu Version](https://code.visualstudio.com/docs/?dv=linux64_deb) or the [Red Hat/Fedora/SUSE version](https://code.visualstudio.com/docs/?dv=linux64_rpm)
-
 -Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).
 
 
