@@ -9,18 +9,18 @@ This backend is using .NET Core 2 and its Web Api 2 functionality.
 First clone this repo. Before taking futher steps, make sure you have a few things installed. 
 
 **Download Visual Studio Community**
-<ul> 
-    <li> If running Windows 7 SP1 and later, download [Visual Studio for Windows](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)</li>
-    <li> If running macOS Sierra 10.12 or later, download [Visual Studio for Mac](https://www.visualstudio.com/thank-you-downloading-visual-studio-mac/?sku=communitymac&rel=15#)</li>
-    <li>If running Linux, Visual Studio is not available. Fret not, there is a way around that.</li>
-</ul> 
+- If running Windows 7 SP1 and later, download [Visual Studio for Windows](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15)
+
+- If running macOS Sierra 10.12 or later, download [Visual Studio for Mac](https://www.visualstudio.com/thank-you-downloading-visual-studio-mac/?sku=communitymac&rel=15#)
+
 
 **First download Visual Studio Code.**
-<ul> 
-    <li>If running Linux, Visual Studio is not available. Fret not, there is a way around that.</li>
-    <li> First download Visual Studio Code. Depending on your flavor of Linux you will either download the [Debian/Ubuntu Version](https://code.visualstudio.com/docs/?dv=linux64_deb) or the [Red Hat/Fedora/SUSE version](https://code.visualstudio.com/docs/?dv=linux64_rpm).</li>
-    <li> Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).</li>
-</ul>
+
+- If running Linux, Visual Studio is not available. Fret not, there is a way around that.
+- First download Visual Studio Code. Depending on your flavor of Linux you will either download the [Debian/Ubuntu Version](https://code.visualstudio.com/docs/?dv=linux64_deb) or the [Red Hat/Fedora/SUSE version](https://code.visualstudio.com/docs/?dv=linux64_rpm)
+
+-Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).
+
 
 Download NodeJS LTS version. You can download one of two ways. 
     - First option is downloading `NodeJS` from the [NodeJS Website](https://nodejs.org/en/)
