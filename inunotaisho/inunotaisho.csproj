@@ -17,42 +17,4 @@
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.2" />
     <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\inline.bundle.js" />
-    <Content Remove="wwwroot\index.html" />
-    <Content Remove="wwwroot\fonts\FontAwesome.otf" />
-    <Content Remove="wwwroot\fonts\fontawesome-webfont.eot" />
-    <Content Remove="wwwroot\fonts\fontawesome-webfont.svg" />
-    <Content Remove="wwwroot\fonts\fontawesome-webfont.ttf" />
-    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff" />
-    <Content Remove="wwwroot\fonts\fontawesome-webfont.woff2" />
-    <Content Remove="wwwroot\images\Screen Shot 2016-01-14 at 12.15.35 PM.png" />
-    <Content Remove="wwwroot\images\borderlandoftherockies.png" />
-    <Content Remove="wwwroot\images\crabs_on_the_rocks.jpg" />
-    <Content Remove="wwwroot\images\defendingmotherandson.gif" />
-    <Content Remove="wwwroot\images\ebfairweather-1.png" />
-    <Content Remove="wwwroot\images\incwealth.png" />
-    <Content Remove="wwwroot\images\inu-no-taisho-foto.jpg" />
-    <Content Remove="wwwroot\images\inuyashanewborn.gif" />
-    <Content Remove="wwwroot\images\logo.png" />
-    <Content Remove="wwwroot\images\logo.svg" />
-    <Content Remove="wwwroot\images\method-mnemonics-d09aa3ce6ba8a2bdff6a9a3753769aaf6985cec4ad491c1b270abbda9c6bc1d3.png" />
-    <Content Remove="wwwroot\images\motherfatherandchild.gif" />
-    <Content Remove="wwwroot\images\myselfie.jpg" />
-    <Content Remove="wwwroot\images\mywebsitelogo.png" />
-    <Content Remove="wwwroot\images\ng-logo.png" />
-    <Content Remove="wwwroot\images\reactjs.svg" />
-    <Content Remove="wwwroot\images\savingwifeandchild.gif" />
-    <Content Remove="wwwroot\images\ua-square-logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="dist\wwwroot\inline.bundle.js" />
-    <None Remove="dist\wwwroot\inline.bundle.js.map" />
-    <None Remove="dist\wwwroot\main.bundle.js" />
-    <None Remove="dist\wwwroot\main.bundle.js.map" />
-    <None Remove="dist\wwwroot\polyfills.bundle.js" />
-    <None Remove="dist\wwwroot\polyfills.bundle.js.map" />
-    <None Remove="public\dist\app.css" />
-  </ItemGroup>
 </Project>

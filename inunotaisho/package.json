@@ -82,7 +82,7 @@
     "less": "mkdirp wwwroot/dist && lessc ./src/app/styles/main.less > ./wwwroot/dist/app.css --clean-css=\"--s0 --advanced\"",
     "watch": "npm run watch:less",
     "watch:less": "",
-    "start": "concurrently -r \"npm run clean\" \"npm run bundle\"",
+    "start": "npm run clean && npm run bundle",
     "pack": "webpack --config webpack.config.dev.js",
     "test": "",
     "ts": "tsc -p .",
