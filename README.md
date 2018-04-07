@@ -22,9 +22,10 @@ First clone this repo. Before taking futher steps, make sure you have a few thin
 -Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).
 
 
-Download NodeJS LTS version. You can download one of two ways. 
-    - First option is downloading `NodeJS` from the [NodeJS Website](https://nodejs.org/en/)
-    - Second for macOS/ Linux users I would advise you to install [NVM](https://github.com/creationix/nvm) to allow for multiple versions of node to be used on your system.
+**Download NodeJS LTS version. You can download one of two ways.**
+
+- First option is downloading `NodeJS` from the [NodeJS Website](https://nodejs.org/en/)
+- Second for macOS/ Linux users I would advise you to install [NVM](https://github.com/creationix/nvm) to allow for multiple versions of node to be used on your system.
 
  All modules a stored in `node_modules` and `webpack` is used as a module loader. The `webpack.config.env.js` is basic, but it does what we need. 
 
