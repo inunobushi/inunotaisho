@@ -8,14 +8,16 @@ This backend is using .NET Core 2 and its Web Api 2 functionality.
 
 First clone this repo. Before taking futher steps, make sure you have a few things installed. 
 
-    A) Download Visual Studio Community 
-        - If running Windows 7 SP1 and later, download [Visual Studio for Windows](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15) 
-        - If running macOS Sierra 10.12 or later, download [Visual Studio for Mac](https://www.visualstudio.com/thank-you-downloading-visual-studio-mac/?sku=communitymac&rel=15#)
-        - If running Linux, Visual Studio is not available. Fret not, there is a way around that. First download Visual Studio Code. Depending on your flavor of Linux you will either download the [Debian/Ubuntu Version](https://code.visualstudio.com/docs/?dv=linux64_deb) or the [Red Hat/Fedora/SUSE version](https://code.visualstudio.com/docs/?dv=linux64_rpm). Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).
+Download Visual Studio Community 
+    - If running Windows 7 SP1 and later, download [Visual Studio for Windows](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15) 
+    - If running macOS Sierra 10.12 or later, download [Visual Studio for Mac](https://www.visualstudio.com/thank-you-downloading-visual-studio-mac/?sku=communitymac&rel=15#)
+    - If running Linux, Visual Studio is not available. Fret not, there is a way around that. First download Visual Studio Code. 
+      Depending on your flavor of Linux you will either download the [Debian/Ubuntu Version](https://code.visualstudio.com/docs/?dv=linux64_deb) or the [Red Hat/Fedora/SUSE version](https://code.visualstudio.com/docs/?dv=linux64_rpm). 
+      Second you will need to download [mono](https://www.mono-project.com/download/stable/#download-lin).
 
-    B) Download NodeJS LTS version. You can download one of two ways. 
-        - First option is downloading `NodeJS` from the [NodeJS Website](https://nodejs.org/en/)
-        - Second for macOS/ Linux users I would advise you to install [NVM](https://github.com/creationix/nvm) to allow for multiple versions of node to be used on your system.
+Download NodeJS LTS version. You can download one of two ways. 
+    - First option is downloading `NodeJS` from the [NodeJS Website](https://nodejs.org/en/)
+    - Second for macOS/ Linux users I would advise you to install [NVM](https://github.com/creationix/nvm) to allow for multiple versions of node to be used on your system.
 
  All modules a stored in `node_modules` and `webpack` is used as a module loader. The `webpack.config.env.js` is basic, but it does what we need. 
 
