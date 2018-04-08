@@ -2,9 +2,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Iunotaisho.models
+namespace Inunotaisho.Models.User
 {
-
     public class UserSchema
     {
         [BsonId]
@@ -20,5 +19,4 @@ namespace Iunotaisho.models
         public string firstName { get; set; }
         public string lastName { get; set; }
     }
-
 }

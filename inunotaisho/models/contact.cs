@@ -2,9 +2,8 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace Iunotaisho.models
+namespace Inunotaisho.Models.Contact
 {
-
     public class ContactSchema
     {
         [BsonId]
@@ -20,5 +19,4 @@ namespace Iunotaisho.models
         public string subject { get; set; }
         public string message { get; set; }
     }
-
 }
