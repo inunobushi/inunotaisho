@@ -10,8 +10,6 @@
     <Folder Include="lib\" />
     <Folder Include="lib\Controllers\" />
     <Folder Include="lib\Middleware\" />
-    <Folder Include="Models\" />
-    <Folder Include="Models\Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,5 +24,16 @@
     <Compile Remove="lib\models\user.cs" />
     <Compile Remove="lib\models\contact.cs" />
     <Compile Remove="lib\Models\Contact.cs" />
+    <Compile Remove="models\interfaces\Index.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\images\logo.png" />
+    <Content Remove="wwwroot\images\myselfie.jpg" />
+    <Content Remove="wwwroot\images\mywebsitelogo.png" />
+    <Content Remove="wwwroot\images\ng-logo.png" />
+    <Content Remove="wwwroot\images\reactjs.svg" />
+    <Content Remove="wwwroot\images\savingwifeandchild.gif" />
+    <Content Remove="wwwroot\images\ua-square-logo.png" />
   </ItemGroup>
 </Project>

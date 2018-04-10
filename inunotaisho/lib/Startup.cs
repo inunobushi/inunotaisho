@@ -15,6 +15,7 @@ namespace Inunotaisho
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("MyPolicy", builder => { builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin(); }));
             services.AddMvc();
         }
 
@@ -37,7 +38,7 @@ namespace Inunotaisho
             // Configures application for usage as API
             // with default route of '/api/[Controller]'
             app.UseMvcWithDefaultRoute();
-
+            app.UseCors("MyPolicy");
             // Configures applcation to serve the index.html file from /wwwroot
             // when you access the server from a web browser
             app.UseDefaultFiles();

@@ -1,19 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Inunotaisho.Models.User;
 using Microsoft.AspNetCore.Mvc;
-using Inunotaisho.Models.Contact;
-using Microsoft.AspNetCore.Cors;
-using System.Net.Mail;
-using System.Net;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Inunotaisho.lib.Controllers
 {
-    [EnableCors("MyPolicy")]
     [Route("api/[controller]")]
-    public class ContactController : Controller
+    public class RegistrationController : Controller
     {
         // GET: api/values
         [HttpGet]
@@ -31,29 +28,9 @@ namespace Inunotaisho.lib.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]ContactSchema ContactForm)
+        public void Post([FromBody]UserSchema loginForm)
         {
-            var data = ContactForm;
-            SmtpClient client = new SmtpClient("smtp.gmail.com");
-            client.Port = 587;
-            //if we need to authenticate
-            client.Credentials = new NetworkCredential("ervistrupja@gmail.com", "password");
-
-            //security: ask to enable SSL
-            //client.EnableSsl = true;
-
-            //Construct the email
-            MailMessage mailMessage = new MailMessage()
-            {
-                From = "youremailaddress",
-                To = form.email,
-                Subject = form.subject,
-                Body = form.message
-            };
-
-            client.Send(mailMessage);
-
-
+            var data = loginForm;
         }
 
         // PUT api/values/5
@@ -67,6 +44,5 @@ namespace Inunotaisho.lib.Controllers
         public void Delete(int id)
         {
         }
-
     }
 }
