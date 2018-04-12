@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Inunotaisho.Models.User;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Inunotaisho.lib.Controllers
 {
+    [EnableCors("CORSPolicy")]
     [Route("api/[controller]")]
     public class RegistrationController : Controller
     {
@@ -28,9 +30,9 @@ namespace Inunotaisho.lib.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]UserSchema loginForm)
+        public void Post([FromBody]UserSchema RegData)
         {
-            var data = loginForm;
+            var data = RegData;
         }
 
         // PUT api/values/5

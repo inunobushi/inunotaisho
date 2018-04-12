@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using Inunotaisho.Models.Blog;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Inunotaisho.lib.Controllers
 {
+    [EnableCors("CORSPolicy")]
     [Route("api/[controller]")]
     public class BlogController : Controller
     {
@@ -27,8 +29,9 @@ namespace Inunotaisho.lib.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody]BlogSchema BlogPost)
         {
+            var data = BlogPost;
         }
 
         // PUT api/values/5

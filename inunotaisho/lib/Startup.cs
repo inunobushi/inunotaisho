@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Caching.Redis;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Session;
+using Microsoft.Extensions.Logging;
 
 namespace Inunotaisho
 {
@@ -15,12 +19,18 @@ namespace Inunotaisho
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options => options.AddPolicy("MyPolicy", builder => { builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin(); }));
+            services.AddCors(options => options.AddPolicy("CORSPolicy", builder => { builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin(); }));
+            services.AddDistributedRedisCache(options =>
+            {
+                options.InstanceName = "Sample";
+                options.Configuration = "localhost";
+            });
+            services.AddSession();
             services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             // Redirect any non-API calls to the Angular application
             // so our application can handle the routing
@@ -39,6 +49,7 @@ namespace Inunotaisho
             // with default route of '/api/[Controller]'
             app.UseMvcWithDefaultRoute();
             app.UseCors("MyPolicy");
+            app.UseSession();
             // Configures applcation to serve the index.html file from /wwwroot
             // when you access the server from a web browser
             app.UseDefaultFiles();

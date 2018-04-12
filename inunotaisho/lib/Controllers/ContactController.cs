@@ -11,7 +11,7 @@ using System.Net;
 
 namespace Inunotaisho.lib.Controllers
 {
-    [EnableCors("MyPolicy")]
+    [EnableCors("CORSPolicy")]
     [Route("api/[controller]")]
     public class ContactController : Controller
     {
@@ -43,15 +43,15 @@ namespace Inunotaisho.lib.Controllers
             //client.EnableSsl = true;
 
             //Construct the email
-            MailMessage mailMessage = new MailMessage()
-            {
-                From = "youremailaddress",
-                To = form.email,
-                Subject = form.subject,
-                Body = form.message
-            };
+            //MailMessage mailMessage = new MailMessage()
+            //{
+            //    From = "youremailaddress",
+            //    To = form.email,
+            //    Subject = form.subject,
+            //    Body = form.message
+            //};
 
-            client.Send(mailMessage);
+            //client.Send(mailMessage);
 
 
         }

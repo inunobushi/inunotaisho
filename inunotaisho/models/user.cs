@@ -13,10 +13,10 @@ namespace Inunotaisho.Models.User
         // external ID or key, which may be easier to reference (ex: 1,2,3 etc.)
         public string Id { get; set; }
 
-        public string username { get; set; }
-        public string password { get; set; }
-        public string email { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
