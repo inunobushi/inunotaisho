@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { FroalaEditorModule } from 'angular-froala-wysiwyg';
 declare var $ :any;
-import * as Cloudinary from '@cloudinary/angular-4.x';
+import * as Cloudinary from '@cloudinary/angular-5.x';
 
 @Component({
     selector:'froala-editor',
