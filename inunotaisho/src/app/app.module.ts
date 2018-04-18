@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injectable} from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, CanActivate } from '@angular/router';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 
@@ -54,10 +54,10 @@ export function declarations(): any {
    ],      
    imports: [
       BrowserModule,
-      FormsModule,
-      HttpModule,
       RouterModule.forRoot(routes),
       TooltipModule.forRoot(),
+      FormsModule,
+      HttpClientModule,
       CollapseModule,
       FroalaEditorModule.forRoot(),
       FroalaViewModule.forRoot()
@@ -71,3 +71,4 @@ export function declarations(): any {
 export class AppModule { 
   
 }
+
