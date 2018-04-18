@@ -1,6 +1,6 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import { NgIf } from '@angular/common';
-import { Http } from '@angular/http';
+import { HttpClient} from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 
 
@@ -35,7 +35,7 @@ export function services(): any {
 export class Navbar implements OnDestroy {
     logoutSubscription:Subscription;
 
-    constructor(private http:Http, private authService: AuthService){
+    constructor(private http:HttpClient, private authService: AuthService){
 
     }
     
@@ -44,11 +44,7 @@ export class Navbar implements OnDestroy {
     }
 
     logout = () => {
-        this.logoutSubscription = this.http.get('/logout').subscribe((res) => {
-            if(res.status) {
-                this.authService.setIsLoggedIn(false);
-            }
-        })
+        this.authService.logout();
        
     }
     ngOnDestroy() {
