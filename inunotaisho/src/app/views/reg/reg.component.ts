@@ -1,5 +1,5 @@
 import {Component, OnInit, OnDestroy, Input} from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { NgForm, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
@@ -15,7 +15,7 @@ export class RegComponent implements OnDestroy{
     @Input() user: UserRegistration;
     errorMessage = '';
     
-    constructor(private http:Http){
+    constructor(private http:HttpClient){
         this.user = new UserRegistration();
     }
 

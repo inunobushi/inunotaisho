@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { profileModel} from '../../models/profile.model';
 //var profileComponent = require('./profile.component.html');
 

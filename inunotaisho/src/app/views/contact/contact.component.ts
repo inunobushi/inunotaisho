@@ -1,5 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import {NgForm} from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
 //var contactComponent = require('./contact.component.html');
@@ -11,10 +11,10 @@ import { Subscription } from 'rxjs/Subscription';
 export class ContactComponent implements OnDestroy{
     subscribe:Subscription;
 
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient) { }
 
     onSubmit(contactForm: NgForm){
-        console.log(contactForm.value);
+        console.log(contactForm);
        this.subscribe = this.http.post('api/contact', contactForm.value)
         .subscribe(res => {
             contactForm.reset();

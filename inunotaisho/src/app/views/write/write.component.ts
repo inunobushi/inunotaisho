@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
@@ -20,7 +20,7 @@ export class WriteComponent implements OnDestroy {
         heightMin: 200
     };
 
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient) { }
 
     blogPost(e: any) {
         console.log(this.post);

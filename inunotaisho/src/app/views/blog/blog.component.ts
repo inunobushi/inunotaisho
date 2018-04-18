@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { NgIf } from '@angular/common';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 //var blogComponent = require('./blog.component.html');
 
 
@@ -9,7 +9,7 @@ import { Http } from '@angular/http';
 })
 export class BlogComponent implements OnInit{
     items: {};
-    constructor(private http:Http) {
+    constructor(private http:HttpClient) {
 
      }
 
