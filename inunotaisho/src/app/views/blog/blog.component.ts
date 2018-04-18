@@ -14,7 +14,7 @@ export class BlogComponent implements OnInit{
      }
 
      getBlogItems(){
-        this.http.get('/blog').subscribe(res => {
+        this.http.get('api/blog').subscribe(res => {
             console.log(res)
         }, err => {
             console.log(err);
