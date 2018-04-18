@@ -1,14 +1,15 @@
 const fs = require('fs');
 const path = require('path');
+const projectRoot = process.cwd();
 const ProgressPlugin = require('webpack/lib/ProgressPlugin');
 
-const { HotModuleReplacementPlugin, ProvidePlugin, DefinePlugin, NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
+const { ProvidePlugin, DefinePlugin, NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
 const { UglifyJsPlugin, CommonsChunkPlugin } = require('webpack').optimize;
 const { AotPlugin } = require('@ngtools/webpack');
 
-const nodeModules = path.join(process.cwd(), 'node_modules');
+const nodeModules = path.join(projectRoot, 'node_modules');
 const realNodeModules = fs.realpathSync(nodeModules);
-const genDirNodeModules = path.join(process.cwd(), 'src','$$_gendir','node_modules');
+const genDirNodeModules = path.join(projectRoot, 'src','$$_gendir','node_modules');
 const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
  
  module.exports = {
@@ -37,7 +38,7 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
     },
     target: 'web',
       output: {
-        path: `${__dirname}/public/dist/`,
+        path: `${__dirname}/wwwroot/dist/`,
         filename: "[name].bundle.js",
         chunkFilename: "[id].chunk.js"
      },
@@ -57,6 +58,10 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
     },
     plugins:[
         new NoEmitOnErrorsPlugin(),
+        new ProvidePlugin({
+            $: "jquery",
+            jQuery: 'jquery'
+        }),
         new UglifyJsPlugin({
             minimize: true
             }),
@@ -65,7 +70,6 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
              'process.env.NODE_ENV': JSON.stringify('production'),
               __DEV__: false
           }),
-        new HotModuleReplacementPlugin(),
         new CommonsChunkPlugin({
             minChunks: 2,
             async: "common"
