@@ -1,6 +1,6 @@
 # InuNoTaisho: Angular and .NET Core 2 stack
 
-This is the Angular 4 and .NET Core 2 fullstack version of my website which is www.ebseiten.com.
+This is the Angular 5 and .NET Core 2 fullstack version of my website which is www.ebseiten.com.
 
 Its about 52% of the way complete. It runs so long as you have `mongodb` and `redis` running with sequelize files migrated
 
@@ -43,7 +43,7 @@ Navigate to `localhost:5000` and you should be there.
 - https://redis.io/
 - https://expressjs.com/
 - https://webpack.js.org/configuration/
-- https://v4.angular.io/docs
+- https://angular.io/docs
 - http://www.typescriptlang.org/docs/home.html
 - https://github.com/DefinitelyTyped/DefinitelyTyped
 - http://lesscss.org/
