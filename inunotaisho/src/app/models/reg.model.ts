@@ -1,8 +1,8 @@
 export class UserRegistration {
-        username: string;
-        email: string; 
-        password: string;
-        password_confirm:string;
-        firstName: string;
-        lastName: string;
+        Username: string;
+        Email: string; 
+        Password: string;
+        Password_confirm:string;
+        FirstName: string;
+        LastName: string;
 }
