@@ -1,14 +1,13 @@
 import {Component, OnInit, OnDestroy, Input} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NgForm, FormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import {UserRegistration } from '../../models/reg.model';
-//var regComponent = require('./reg.component.html');
 
 
 @Component({
-    templateUrl:'./reg.component.html' //template: regComponent
+    templateUrl:'./reg.component.html' 
 })
 
 export class RegComponent implements OnDestroy{
@@ -34,7 +33,16 @@ export class RegComponent implements OnDestroy{
     // }
 
     onSubmit(form:NgForm){
-        this.reg = this.http.post('api/users/register', this.user).subscribe((res) => {
+        var req = 'http://localhost:5000/api/registration/';
+        console.log('User Data - ',this.user);
+        const httpOptions = {
+            headers: new HttpHeaders({
+                'Content-Type':'application/json',
+                'Access-Control-Allow-Origin':'*'
+            })
+        }
+
+        this.reg = this.http.post(req, this.user, httpOptions).subscribe((res) => {
             // success status code 2xx
             console.log(res);
             this.errorMessage = '';
