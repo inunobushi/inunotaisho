@@ -18,6 +18,6 @@ namespace Inunotaisho.Models.Blog
         public string Subject { get; set; }
         public string Post { get; set; }
         public DateTime UpdatedOn { get; set; } = DateTime.Now;
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
+        //public DateTime CreatedOn { get; set; } = DateTime.Now;
     }
 }
