@@ -33,7 +33,7 @@ export class RegComponent implements OnDestroy{
     // }
 
     onSubmit(form:NgForm){
-        var req = 'http://localhost:5000/api/registration/';
+        var req = 'api/registration/';
         console.log('User Data - ',this.user);
         const httpOptions = {
             headers: new HttpHeaders({
