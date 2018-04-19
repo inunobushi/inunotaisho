@@ -27,6 +27,7 @@
     <Compile Remove="lib\Models\Contact.cs" />
     <Compile Remove="models\interfaces\Index.cs" />
     <Compile Remove="Models\EmptyClass.cs" />
+    <Compile Remove="Models\blog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
