@@ -17,8 +17,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.2" />
     <PackageReference Include="MongoDB.Driver" Version="2.5.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.0.2" />
-    <PackageReference Include="Microsoft.Extensions.Caching.Redis.Core" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="lib\Controllers\PrimeController.cs" />
@@ -27,6 +26,7 @@
     <Compile Remove="lib\models\contact.cs" />
     <Compile Remove="lib\Models\Contact.cs" />
     <Compile Remove="models\interfaces\Index.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
@@ -37,5 +37,10 @@
     <Content Remove="wwwroot\images\reactjs.svg" />
     <Content Remove="wwwroot\images\savingwifeandchild.gif" />
     <Content Remove="wwwroot\images\ua-square-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="inunotaisho.json">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
 </Project>
