@@ -54,7 +54,7 @@ export function declarations(): any {
    ],      
    imports: [
       BrowserModule,
-      RouterModule.forRoot(routes),
+      RouterModule.forRoot(routes, { useHash: true }),
       TooltipModule.forRoot(),
       FormsModule,
       HttpClientModule,
