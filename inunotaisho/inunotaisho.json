@@ -1,3 +1,20 @@
 ﻿{
+  "MongoConnection": {
+    "ConnectionString": "",
+    "Database": "inunotaisho"
+  },
 
-}
+  "Logging": {
+    "IncludeScopes": false,
+    "Debug": {
+      "LogLevel": {
+        "Default": "Warning"
+      }
+    },
+    "Console": {
+      "LogLevel": {
+        "Default": "Warning"
+      }
+    }
+
+  }
