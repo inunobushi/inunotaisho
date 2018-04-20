@@ -20,10 +20,6 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
-
-    <Compile Remove="models\interfaces\Index.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Remove="wwwroot\index.html" />
     <Content Remove="wwwroot\images\logo.png" />
     <Content Remove="wwwroot\images\myselfie.jpg" />
