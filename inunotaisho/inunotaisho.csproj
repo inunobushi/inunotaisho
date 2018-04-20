@@ -7,9 +7,9 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
-    <Folder Include="lib\" />
-    <Folder Include="lib\Controllers\" />
-    <Folder Include="lib\Middleware\" />
+    <Folder Include="Lib\" />
+    <Folder Include="Lib\Controllers\" />
+    <Folder Include="Lib\Middleware\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,14 +20,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="lib\Controllers\PrimeController.cs" />
-    <Compile Remove="lib\models\blog.cs" />
-    <Compile Remove="lib\models\user.cs" />
-    <Compile Remove="lib\models\contact.cs" />
-    <Compile Remove="lib\Models\Contact.cs" />
+
     <Compile Remove="models\interfaces\Index.cs" />
-    <Compile Remove="Models\EmptyClass.cs" />
-    <Compile Remove="Models\blog.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
