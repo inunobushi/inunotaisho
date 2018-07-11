@@ -1,11 +1,10 @@
-import {Component, OnDestroy} from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {NgForm} from '@angular/forms';
-import { Subscription } from 'rxjs/Subscription';
-//var contactComponent = require('./contact.component.html');
+import { NgForm } from '@angular/forms';
+import { Subscription } from 'rxjs';
 
 @Component({
-    templateUrl:'./contact.component.html' //template: contactComponent
+    templateUrl:'./contact.component.html'
 })
 
 export class ContactComponent implements OnDestroy{
