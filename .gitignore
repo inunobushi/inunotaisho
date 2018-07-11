@@ -43,8 +43,8 @@ Thumbs.db
 
 # Distribution files
 inunotaisho/wwwroot/dist
-inunotaisho/wwwroot//assets/images
-inunotaisho/wwwroot/assets/fonts
+inunotaisho/wwwroot/assets/
+inunotaisho/wwwroot/fonts
 inunotaisho/wwwroot/assets/i18n
 inunotaisho/wwwroot/assets/images
 
