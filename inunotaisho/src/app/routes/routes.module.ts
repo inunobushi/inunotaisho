@@ -1,19 +1,21 @@
 import { Routes, CanActivate } from '@angular/router';
 
-import { HomeComponent } from '../views/home/home.component';
-import { EdComponent } from '../views/education/ed.component';
-import { PortfolioComponent } from '../views/portfolio/portfolio.component';
-import { BlogComponent } from '../views/blog/blog.component';
-import { BlogPostComponent } from '../views/blogpost/blogpost.component';
-import { LoginComponent }from '../views/login/login.component';
-import { ProfileComponent } from '../views/profile/profile.component';
-import { WriteComponent } from '../views/write/write.component';
-import { ContactComponent } from '../views/contact/contact.component';
-import { RegComponent } from '../views/reg/reg.component';
-import portImgContainer from '../views/portfolio/images/portfolio.image.component';
-import FroalaEditor from '../views/write/froala-editor/froala.component';
+import { HomeComponent } from '../components/home/home.component';
+import { EdComponent } from '../components/education/ed.component';
+import { PortfolioComponent } from '../components/portfolio/portfolio.component';
+import { BlogComponent } from '../components/blog/blog.component';
+import { BlogPostComponent } from '../components/blogpost/blogpost.component';
+import { LoginComponent }from '../components/login/login.component';
+import { ProfileComponent } from '../components/profile/profile.component';
+import { WriteComponent } from '../components/write/write.component';
+import { ContactComponent } from '../components/contact/contact.component';
+import { RegComponent } from '../components/reg/reg.component';
+import { ErrorComponent } from '../components/errors/error.component';
+import portImgContainer from '../components/portfolio/portfolio-images/portfolio.image.component';
+import FroalaEditor from '../components/write/froala-editor/froala.component';
+import { SocialBannerComponent } from '../common/banners/social/social.component';
 
-import { AuthGuard } from "../services/authguard/authguard.service"
+import { AuthGuard } from "../common/authguard/authguard.guard";
 
 
 export const routes: Routes = [
@@ -26,5 +28,6 @@ export const routes: Routes = [
     {path:'write', component: WriteComponent, canActivate: [AuthGuard]},
     {path:'contact', component: ContactComponent},
     {path:'reg', component: RegComponent},
-    {path:'blogPost', component: BlogPostComponent}
+    {path:'blogPost', component: BlogPostComponent},
+    { path: '**',  component: ErrorComponent }
    ]
