@@ -6,12 +6,13 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const { HotModuleReplacementPlugin, ProvidePlugin, DefinePlugin, NoEmitOnErrorsPlugin, SourceMapDevToolPlugin, NamedModulesPlugin } = require('webpack');
 const { UglifyJsPlugin, CommonsChunkPlugin } = require('webpack').optimize;
-const { AotPlugin } = require('@ngtools/webpack');
+const AotPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 
 const nodeModules = path.join(projectRoot, 'node_modules');
 const realNodeModules = fs.realpathSync(nodeModules);
 const genDirNodeModules = path.join(projectRoot, 'src','$$_gendir','node_modules');
 const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
+const bundleOutputDir = './wwwroot/dist';
  
  module.exports = {
     devtool: "source-map",
@@ -42,7 +43,7 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
     },
     target: 'web',
       output: {
-        path: `${__dirname}/wwwroot/dist/`,
+        path: path.join(__dirname, bundleOutputDir),
         filename: "[name].bundle.js",
         chunkFilename: "[id].chunk.js"
      },
@@ -122,7 +123,7 @@ const entryPoints = ["inline","polyfills","sw-register","vendor","main"];
             hostReplacementPaths: {
                 "environments/environment.ts": "environments/environment.ts"
             },
-            tsConfigPath: './src/tsconfig.src.json',
+            tsConfigPath: './src/tsconfig.app.json',
             skipCodeGeneration: true,
             sourceMap: true
         })
