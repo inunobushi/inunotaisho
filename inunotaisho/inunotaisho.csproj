@@ -40,4 +40,40 @@
       <CopyToPublishDirectory>Never</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
+
+  <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+
+    <!-- In development, the dist files won't exist on the first run or when cloning to
+         a different machine, so rebuild them if not already present. -->
+    <Message Importance="high" Text="Performing first-run Webpack build..." />
+    <Exec Command="npm install" />
+    <Exec Command="node node_modules/rimraf/rimraf.js ./wwwroot/*" />
+    <Exec Command="cp -R src/index.html ./wwwroot/index.html" />
+    <Exec Command="node node_modules/mkdirp/index.js ./wwwroot/assets" />
+    <Exec Command="node node_modules/mkdirp/index.js ./wwwroot/dist" />   
+    <Exec Command="cp -R node_modules/font-awesome/fonts ./wwwroot/fonts" />
+    <Exec Command="cp -R src/assets/images ./wwwroot/assets/images" />
+    <Exec Command="cp -R src/assets/i18n ./wwwroot/assets/i18n" />
+    <Exec Command="node node_modules/less/bin/lessc ./src/app/styles/main.less ./wwwroot/dist/app.css node_modules/less-plugin-clean-css/lib/index.js=\'--s0 --advanced\'" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.dev.js" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec Command="npm install" />
+    <Exec Command="rimraf wwwroot/*" />
+    <Exec Command="cp -R src/index.html ./wwwroot/index.html" />
+    <Exec Command="mkdir ./wwwroot/assets" />
+    <Exec Command="cp -R node_modules/font-awesome/fonts ./wwwroot/fonts" />
+    <Exec Command="cp -R src/assets/images ./wwwroot/assets/images" />
+    <Exec Command="cp -R src/assets/i18n ./wwwroot/assets/i18n" />
+    <Exec Command="lessc ./src/app/styles/main.less ./wwwroot/dist/app.css --clean-css=\'--s0 --advanced\'" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --config webpack.config.prod.js --env.prod" />
+    <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
+  </Target>
 </Project>
