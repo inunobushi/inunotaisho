@@ -52,10 +52,10 @@
          a different machine, so rebuild them if not already present. -->
     <Message Importance="high" Text="Performing first-run Webpack build..." />
     <Exec Command="npm install" />
-    <Exec Command="node node_modules/rimraf/rimraf.js ./wwwroot/*" />
+    <Exec Command="rm -rf ./wwwroot/*" />
     <Exec Command="cp -R src/index.html ./wwwroot/index.html" />
-    <Exec Command="node node_modules/mkdirp/index.js ./wwwroot/assets" />
-    <Exec Command="node node_modules/mkdirp/index.js ./wwwroot/dist" />   
+    <Exec Command="mkdir -p ./wwwroot/assets" />
+    <Exec Command="mkdir -p ./wwwroot/dist" />   
     <Exec Command="cp -R node_modules/font-awesome/fonts ./wwwroot/fonts" />
     <Exec Command="cp -R src/assets/images ./wwwroot/assets/images" />
     <Exec Command="cp -R src/assets/i18n ./wwwroot/assets/i18n" />
